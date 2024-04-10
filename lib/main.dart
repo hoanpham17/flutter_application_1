@@ -12,102 +12,134 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: CustomInterface(),
+      home: FirstPortfolio(),
     );
   }
 }
 
-class CustomInterface extends StatelessWidget {
+class FirstPortfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Row(
-          children: [
-            IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () {
-                // Add your home button onPressed event here
-              },
-            ),
-            SizedBox(width: 10),
-            Expanded(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text(
-                  'First Portfolio Exam',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white, // Set white color
-                  ),
-                ),
-              ),
-            )
-          ],
+        backgroundColor: Color(0xFF173C69),
+        title: Text(
+          'First Portfolio Exam',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.home),
+          onPressed: () {},
         ),
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
+          Center(
             child: Container(
-              color: Colors.orange,
-              alignment: Alignment.center,
-              height: 150,
-              width: 100,
-              child: Text(
-                'Orange Box',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              width: 160,
+              height: 80,
+              margin: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: Colors.black,
+                  width: 4,
+                ),
+              ),
+              child: FittedBox(
+                fit: BoxFit.contain,
+                child: Center(
+                  child: Text(
+                    'Welcome',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
           ),
-          SizedBox(height: 100),
+          Expanded(
+            flex: 1,
+            child: SizedBox(),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
-                  width: 100,
+              Container(
+                color: Color(0xFF323232),
+                height: 100,
+                width: 100,
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: Text(
+                    'TAMK',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(width: 5),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.grey,
-                  height: 200,
-                  width: 100,
+              Spacer(),
+              Container(
+                color: Color(0xFF666666),
+                height: 200,
+                width: 100,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Flutter',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(width: 5),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
-                  width: 100,
+              Spacer(),
+              Container(
+                color: Color(0xFF999999),
+                height: 100,
+                width: 100,
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    'THWS',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 100),
           Expanded(
-            flex: 2,
+            flex: 1,
+            child: SizedBox(),
+          ),
+          Center(
             child: Container(
-              height: 100,
-              width: 150,
-              color: Colors.blue,
-              alignment: Alignment.center,
+              height: 120,
+              width: 200,
+              margin: EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 4,
+                ),
+              ),
               child: Image.asset(
-                'assets/image.jpg', // Replace 'assets/image.jpg' with your image path
-                fit: BoxFit.contain,
+                'assets/images/thws-logo.jpeg',
+                fit: BoxFit.cover,
               ),
             ),
           ),
